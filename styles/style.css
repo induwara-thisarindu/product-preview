@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+body {
+    background-color: var(--cream);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    border-radius: 10px;
+    background: var(--white);
+}
+
+.container .img .mobile {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container .img .desktop {
+    display: none;
+}
+
+.container .info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.container .info p {
+    margin-bottom: 20px;
+}
+.container .info p span {
+    margin-left: 5px;
+    color: var(--dark-cyan);
+    font-weight: 500;
+}
+.container .info h1 {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 40px;
+    line-height: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.container .info .info_p {
+    line-height: 1.7rem;
+    font-weight: 500;
+    color: var(--dark-cyan);
+    margin-bottom: 30px;
+}
+
+.container .info .pricing {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.container .info .pricing p {
+    text-decoration: line-through;
+    color: var(--dark-cyan);
+    font-weight: 500;
+}
+.container .info .pricing h1{
+    color: var(--dark-cyan);
+}
+
+.container .info button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 20px 15px;
+    background-color: var(--dark-cyan);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.container .info button img {
+    width: 16px;
+}
+.container .info button p {
+    margin: 0;
+    font-weight: 700;
+}
+
+@media (min-width: 750px) {
+    .container {
+        flex-direction: row;
+        width: 700px;
+        margin-top: 250px;
+        margin-bottom: 250px;
+    }
+    .container .img .mobile {
+        display: none;
+    }
+    .container .img .desktop {
+        display: block;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 350px;
+    }
+    .container .info {
+        width: 300px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    .container .info .pricing {
+        margin-bottom: 10px;
+    }
+}
