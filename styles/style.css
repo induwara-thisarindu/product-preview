@@ -101,8 +101,6 @@ body {
     .container {
         flex-direction: row;
         width: 700px;
-        margin-top: 150px;
-        margin-bottom: 150px;
     }
     .container .img .mobile {
         display: none;
